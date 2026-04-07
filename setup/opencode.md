@@ -100,18 +100,12 @@ cp agents/experience-miner.md ~/.config/opencode/agents/
 └── skills/
     ├── experience-index/SKILL.md
     ├── tp/search-first/SKILL.md
-    ├── tp/edit-over-write/SKILL.md
-    ├── tp/parallel-strategy/SKILL.md
-    ├── wf/feature-dev/SKILL.md
     ├── wf/bugfix-flow/SKILL.md
-    ├── wf/refactor-safe/SKILL.md
-    ├── wf/git-commit/SKILL.md
-    ├── cs/dep-version-conflict/SKILL.md
     ├── cs/ts-type-assertion-trap/SKILL.md
-    ├── ap/context-explosion/SKILL.md
-    ├── ap/overedit/SKILL.md
-    └── ap/skip-verify/SKILL.md
+    └── ap/context-explosion/SKILL.md
 ```
+
+> 预置 4 条通用经验示例。更多经验由用户在日常使用中通过 `/mine` 沉淀。
 
 ---
 
@@ -121,7 +115,8 @@ cp agents/experience-miner.md ~/.config/opencode/agents/
 □ ~/.config/opencode/AGENTS.md 存在
 □ ~/.config/opencode/skills/experience-index/SKILL.md 存在
 □ ~/.config/opencode/skills/tp/search-first/SKILL.md 存在
-□ ~/.config/opencode/skills/wf/feature-dev/SKILL.md 存在
+□ ~/.config/opencode/skills/wf/bugfix-flow/SKILL.md 存在
+□ ~/.config/opencode/skills/cs/ts-type-assertion-trap/SKILL.md 存在
 □ ~/.config/opencode/skills/ap/context-explosion/SKILL.md 存在
 □ ~/.config/opencode/agents/experience-miner.md 存在
 □ opencode.json 包含 /mine 和 /exp 命令
