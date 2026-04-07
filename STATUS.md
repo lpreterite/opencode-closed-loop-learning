@@ -29,9 +29,9 @@
 | 类别 | 状态 | 数量 |
 |------|------|------|
 | 经验索引 | ✅ 完成 | 1条 |
-| 工具优先级 | ✅ 完成 | 5条 |
+| 工具优先级 | ✅ 完成 | 7条 |
 | 流程经验 | ✅ 完成 | 4条 |
-| 案例经验 | ✅ 完成 | 2条 |
+| 案例经验 | ✅ 完成 | 4条 |
 | 反模式警告 | ✅ 完成 | 4条 |
 
 ### Agent 角色（agents/）
@@ -58,6 +58,8 @@
 | edit-over-write | ⚡待验证 | 文件编辑优先级：Edit > Write > Bash |
 | parallel-strategy | ✅核心 | 并行执行策略：减少往返次数 |
 | https-to-ssh-fallback | ⚡待验证 | GitHub HTTPS 认证失败时切换 SSH 方式 |
+| pencil-mcp-workflow | ⚡待验证 | Pencil VS Code 扩展的截图、导出、布局验证流程 |
+| design-verification-fallback | ⚡待验证 | 设计稿标注与实现不一致时的降级策略 |
 
 ### 流程经验 (wf/)
 
@@ -74,6 +76,8 @@
 |------|------|------|
 | dep-version-conflict | ⚡待验证 | 依赖版本冲突定位与解决 |
 | ts-type-assertion-trap | ⚡待验证 | TS类型断言掩盖运行时错误 |
+| pencil-flexbox-fix | ⚡待验证 | Pencil flexbox 布局子节点位置偏离和裁剪问题 |
+| pencil-icon-repair | ⚡待验证 | Pencil 图标导出尺寸不一致问题修复 |
 
 ### 反模式警告 (ap/)
 
@@ -92,7 +96,8 @@
 - [x] 创建目录结构
 - [x] 创建 README.md 和 STATUS.md
 - [x] 创建设计文档（4篇 guide）
-- [x] 部署初始经验库（13条）
+- [x] 部署初始经验库（15条）
+- [x] 清理 symlink，替换为实际内容文件
 - [x] 创建经验矿工 Agent
 - [x] 创建 OpenCode 部署指南
 - [x] Git 仓库初始化
@@ -110,6 +115,6 @@
 ## 最近更新
 
 ```
-2026-04-07 v0.2：验证机制升级为"失败驱动修正"，新增 2 条经验（https-to-ssh-fallback, repeated-auth-retry）
+2026-04-07 v0.2：验证机制升级为"失败驱动修正"，新增 2 条经验（https-to-ssh-fallback, repeated-auth-retry），清理 symlink
 2026-04-07 v0.1：初始版本，完整四层架构设计 + 13条种子经验 + 经验矿工 Agent
 ```
