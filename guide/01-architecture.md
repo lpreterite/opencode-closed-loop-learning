@@ -134,26 +134,20 @@
     ├── experience-index/                  # Layer 1: 经验路由索引
     │   └── SKILL.md
     │
-    ├── tp/                                # 工具优先级经验
-    │   ├── search-first/
-    │   ├── edit-over-write/
-    │   └── parallel-strategy/
+    ├── tp/                               # 工具优先级经验（示例）
+    │   └── search-first/
     │
-    ├── wf/                                # 流程经验
-    │   ├── feature-dev/
-    │   ├── bugfix-flow/
-    │   ├── refactor-safe/
-    │   └── git-commit/
+    ├── wf/                               # 流程经验（示例）
+    │   └── bugfix-flow/
     │
-    ├── cs/                                # 案例经验
-    │   ├── dep-version-conflict/
+    ├── cs/                               # 案例经验（示例）
     │   └── ts-type-assertion-trap/
     │
-    └── ap/                                # 反模式警告
-        ├── context-explosion/
-        ├── overedit/
-        └── skip-verify/
+    └── ap/                               # 反模式警告（示例）
+        └── context-explosion/
 ```
+
+> 预置 4 条通用经验示例，用户可通过 `/mine` 沉淀更多经验。
 
 ---
 
@@ -162,14 +156,8 @@
 | 场景 | 推荐加载 | 触发条件 |
 |------|---------|---------|
 | 代码搜索/定位 | tp/search-first | 需要找文件或代码位置 |
-| 文件编辑/修改 | tp/edit-over-write | 需要修改文件 |
-| 多文件并行操作 | tp/parallel-strategy | 需要同时操作多个文件 |
-| 新功能开发 | wf/feature-dev | 用户要求添加新功能 |
 | Bug 修复 | wf/bugfix-flow | 用户报告错误/异常 |
-| 代码重构 | wf/refactor-safe | 用户要求改善代码结构 |
-| Git 操作 | wf/git-commit | 涉及 commit/PR 操作 |
-| 依赖版本冲突 | cs/dep-version-conflict | module not found / 版本报错 |
 | TS 类型断言陷阱 | cs/ts-type-assertion-trap | 编译通过但运行报错 |
 | 上下文爆炸 | ap/context-explosion | 一次读取超过 10 个文件 |
-| 过度编辑 | ap/overedit | 单次修改超过 5 个文件 |
-| 跳步验证 | ap/skip-verify | 修改完未运行 lint/test |
+
+> 预置 4 条通用经验示例，用户可通过 `/mine` 沉淀更多经验。
