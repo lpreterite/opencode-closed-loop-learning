@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/cs/ts-type-assertion-trap/SKILL.md

@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/tp/search-first/SKILL.md

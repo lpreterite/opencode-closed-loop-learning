@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/ap/context-explosion/SKILL.md

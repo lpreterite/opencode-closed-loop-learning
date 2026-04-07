@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/tp/pencil-mcp-workflow/SKILL.md

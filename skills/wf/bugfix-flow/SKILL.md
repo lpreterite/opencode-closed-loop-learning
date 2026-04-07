@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/wf/bugfix-flow/SKILL.md

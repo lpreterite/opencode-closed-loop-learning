@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/experience-index/SKILL.md

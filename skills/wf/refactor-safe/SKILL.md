@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/wf/refactor-safe/SKILL.md

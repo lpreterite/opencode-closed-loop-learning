@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/wf/git-commit/SKILL.md

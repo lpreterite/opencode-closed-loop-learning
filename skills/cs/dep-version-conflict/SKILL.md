@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/cs/dep-version-conflict/SKILL.md

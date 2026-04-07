@@ -1,0 +1,1 @@
+/Users/packy/.config/opencode/skills/cs/pencil-flexbox-fix/SKILL.md
