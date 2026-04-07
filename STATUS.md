@@ -29,10 +29,10 @@
 | 类别 | 状态 | 数量 |
 |------|------|------|
 | 经验索引 | ✅ 完成 | 1条 |
-| 工具优先级 | ✅ 完成 | 7条 |
-| 流程经验 | ✅ 完成 | 4条 |
-| 案例经验 | ✅ 完成 | 4条 |
-| 反模式警告 | ✅ 完成 | 4条 |
+| 工具优先级 | 🔒 预留 | 7条 |
+| 流程经验 | 🔒 预留 | 4条 |
+| 案例经验 | 🔒 预留 | 4条 |
+| 反模式警告 | 🔒 预留 | 4条 |
 
 ### Agent 角色（agents/）
 
@@ -54,39 +54,25 @@
 
 | 经验 | 状态 | 说明 |
 |------|------|------|
-| search-first | ✅核心 | 代码搜索优先级：Grep > Glob > Read > Task(explore) |
-| edit-over-write | ⚡待验证 | 文件编辑优先级：Edit > Write > Bash |
-| parallel-strategy | ✅核心 | 并行执行策略：减少往返次数 |
-| https-to-ssh-fallback | ⚡待验证 | GitHub HTTPS 认证失败时切换 SSH 方式 |
-| pencil-mcp-workflow | ⚡待验证 | Pencil VS Code 扩展的截图、导出、布局验证流程 |
-| design-verification-fallback | ⚡待验证 | 设计稿标注与实现不一致时的降级策略 |
+| (7条) | 🔒 | 本地经验，详见 ~/.config/opencode/skills/tp/ |
 
 ### 流程经验 (wf/)
 
 | 经验 | 状态 | 说明 |
 |------|------|------|
-| feature-dev | ✅核心 | 新功能开发五步流程 |
-| bugfix-flow | ✅核心 | Bug修复五步流程 |
-| refactor-safe | ⚡待验证 | 安全重构前提条件和步骤 |
-| git-commit | ✅核心 | Git提交规范和PR流程 |
+| (4条) | 🔒 | 本地经验，详见 ~/.config/opencode/skills/wf/ |
 
 ### 案例经验 (cs/)
 
 | 经验 | 状态 | 说明 |
 |------|------|------|
-| dep-version-conflict | ⚡待验证 | 依赖版本冲突定位与解决 |
-| ts-type-assertion-trap | ⚡待验证 | TS类型断言掩盖运行时错误 |
-| pencil-flexbox-fix | ⚡待验证 | Pencil flexbox 布局子节点位置偏离和裁剪问题 |
-| pencil-icon-repair | ⚡待验证 | Pencil 图标导出尺寸不一致问题修复 |
+| (4条) | 🔒 | 本地经验，详见 ~/.config/opencode/skills/cs/ |
 
 ### 反模式警告 (ap/)
 
 | 经验 | 状态 | 说明 |
 |------|------|------|
-| context-explosion | ✅核心 | 一次读取过多文件的危害 |
-| overedit | ✅核心 | 单次修改过多文件的危害 |
-| skip-verify | ✅核心 | 修改后未运行验证的危害 |
-| repeated-auth-retry | ⚡待验证 | 有备选方案时反复重试失败路径 |
+| (4条) | 🔒 | 本地经验，详见 ~/.config/opencode/skills/ap/ |
 
 ---
 
@@ -98,6 +84,7 @@
 - [x] 创建设计文档（4篇 guide）
 - [x] 部署初始经验库（15条）
 - [x] 清理 symlink，替换为实际内容文件
+- [x] 清空经验内容，保留目录结构（本地经验不暴露）
 - [x] 创建经验矿工 Agent
 - [x] 创建 OpenCode 部署指南
 - [x] Git 仓库初始化
@@ -115,6 +102,6 @@
 ## 最近更新
 
 ```
-2026-04-07 v0.2：验证机制升级为"失败驱动修正"，新增 2 条经验（https-to-ssh-fallback, repeated-auth-retry），清理 symlink
+2026-04-07 v0.2：验证机制升级为"失败驱动修正"，新增 2 条经验（https-to-ssh-fallback, repeated-auth-retry），清理 symlink，清空经验内容
 2026-04-07 v0.1：初始版本，完整四层架构设计 + 13条种子经验 + 经验矿工 Agent
 ```
