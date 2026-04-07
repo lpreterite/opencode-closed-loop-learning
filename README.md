@@ -34,11 +34,7 @@ opencode-closed-loop-learning/
 │   └── 04-deployment.md           # 部署指南、配置说明
 │
 ├── skills/                         # 经验库（实时同步到 ~/.config/opencode/skills/）
-│   ├── experience-index/           # 经验路由索引
-│   ├── tp/                        # 工具优先级经验
-│   ├── wf/                        # 流程经验
-│   ├── cs/                        # 案例经验
-│   └── ap/                        # 反模式警告
+│   └── experience-index/           # 经验路由索引（入口）
 │
 ├── agents/                         # Agent 角色定义
 │   └── experience-miner.md        # 经验矿工 Agent
@@ -62,15 +58,15 @@ opencode-closed-loop-learning/
 
 ### 经验库（skills/）
 
-> 经验库文件实时同步至 `~/.config/opencode/skills/`，详见各 SKILL.md 文件。
+> 经验库文件实时同步至 `~/.config/opencode/skills/`。用户通过 `/mine` 命令沉淀经验，详见 [03-experience-management.md](./guide/03-experience-management.md)。
 
 | 类别 | 目录 | 说明 | 状态 |
 |------|------|------|------|
 | 经验索引 | `experience-index/` | 经验路由入口，按任务类型推荐 | ✅ 核心 |
-| 工具优先级 | `tp/` | 搜索、编辑、并行执行策略 | 5条 |
-| 流程经验 | `wf/` | 功能开发、Bug修复、重构、Git操作 | 4条 |
-| 案例经验 | `cs/` | 依赖冲突、TS类型断言陷阱 | 2条 |
-| 反模式警告 | `ap/` | 上下文爆炸、过度编辑、跳步验证、反复重试 | 4条 |
+| 工具优先级 | `tp/` | 搜索、编辑、并行执行策略 | 🔒 用户沉淀 |
+| 流程经验 | `wf/` | 功能开发、Bug修复、重构、Git操作 | 🔒 用户沉淀 |
+| 案例经验 | `cs/` | 依赖冲突、TS类型断言陷阱 | 🔒 用户沉淀 |
+| 反模式警告 | `ap/` | 上下文爆炸、过度编辑、跳步验证、反复重试 | 🔒 用户沉淀 |
 
 ### Agent 角色（agents/）
 
@@ -111,5 +107,5 @@ opencode-closed-loop-learning/
 
 | 版本 | 日期 | 修订内容 |
 |------|------|----------|
-| v0.2 | 2026-04-07 | 验证机制升级为"失败驱动修正"：经验状态改为 draft/verified/failed，从失败中提取验证数据 |
-| v0.1 | 2026-04-07 | 初始版本，完整四层架构设计 + 13条种子经验 |
+| v0.2 | 2026-04-07 | 清空预置经验内容，保留入口框架；用户通过 /mine 自行沉淀 |
+| v0.1 | 2026-04-07 | 初始版本，完整四层架构设计 |
