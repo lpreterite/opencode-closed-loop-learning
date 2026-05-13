@@ -85,7 +85,7 @@ mkdir -p ~/.config/opencode/agents
 ls ~/.config/opencode/AGENTS.md
 ls ~/.config/opencode/skills/experience-index/SKILL.md
 ls ~/.config/opencode/skills/tp/search-first/SKILL.md
-ls ~/.config/opencode/skills/wf/feature-dev/SKILL.md
+ls ~/.config/opencode/skills/method/bugfix-flow/SKILL.md
 ls ~/.config/opencode/skills/ap/context-explosion/SKILL.md
 ls ~/.config/opencode/agents/experience-miner.md
 ```
@@ -109,25 +109,36 @@ ls ~/.config/opencode/agents/experience-miner.md
 ├── agents/
 │   └── experience-miner.md                # 经验矿工 Agent
 │
-└── skills/
-    ├── experience-index/
-    │   └── SKILL.md                      # 经验路由索引
-    ├── tp/
-    │   ├── search-first/SKILL.md
-    │   ├── edit-over-write/SKILL.md
-    │   └── parallel-strategy/SKILL.md
-    ├── wf/
-    │   ├── feature-dev/SKILL.md
-    │   ├── bugfix-flow/SKILL.md
-    │   ├── refactor-safe/SKILL.md
-    │   └── git-commit/SKILL.md
-    ├── cs/
-    │   ├── dep-version-conflict/SKILL.md
-    │   └── ts-type-assertion-trap/SKILL.md
-    └── ap/
-        ├── context-explosion/SKILL.md
-        ├── overedit/SKILL.md
-        └── skip-verify/SKILL.md
+    └── skills/
+        ├── experience-index/
+        │   └── SKILL.md                      # 经验路由索引
+        ├── tp/                               # 工具优先级
+        │   ├── search-first/SKILL.md
+        │   ├── edit-over-write/SKILL.md
+        │   └── parallel-strategy/SKILL.md
+        ├── method/                           # 方法论（通用可迁移）
+        │   ├── bugfix-flow/SKILL.md
+        │   ├── feature-dev/SKILL.md
+        │   ├── refactor-safe/SKILL.md
+        │   ├── git-commit/SKILL.md
+        │   ├── write-verify/SKILL.md
+        │   └── architecture-mismatch-analysis/SKILL.md
+        ├── dw/                               # 领域工作流（绑定特定系统）
+        │   ├── analysis-handoff-fallback/SKILL.md
+        │   ├── design-product-acceptance/SKILL.md
+        │   └── weekly-task-acceptance-sync/SKILL.md
+        ├── cs/                               # 案例经验
+        │   ├── dep-version-conflict/SKILL.md
+        │   ├── ts-type-assertion-trap/SKILL.md
+        │   └── ...
+        ├── pf/                               # 偏好（新建）
+        │   └── SKILL.md (模板)
+        ├── dk/                               # 领域知识（新建）
+        │   └── SKILL.md (模板)
+        └── ap/                               # 反模式
+            ├── context-explosion/SKILL.md
+            ├── overedit/SKILL.md
+            └── skip-verify/SKILL.md
 ```
 
 ---

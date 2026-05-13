@@ -97,12 +97,15 @@ cp agents/experience-miner.md ~/.config/opencode/agents/
 ├── agents/
 │   └── experience-miner.md                # 经验矿工 Agent
 │
-└── skills/
-    ├── experience-index/SKILL.md
-    ├── tp/search-first/SKILL.md
-    ├── wf/bugfix-flow/SKILL.md
-    ├── cs/ts-type-assertion-trap/SKILL.md
-    └── ap/context-explosion/SKILL.md
+    └── skills/
+        ├── experience-index/SKILL.md
+        ├── tp/search-first/SKILL.md
+        ├── method/bugfix-flow/SKILL.md (原 wf/)
+        ├── dw/analysis-handoff-fallback/SKILL.md (原 wf/)
+        ├── cs/ts-type-assertion-trap/SKILL.md
+        ├── pf/SKILL.md (模板)
+        ├── dk/SKILL.md (模板)
+        └── ap/context-explosion/SKILL.md
 ```
 
 > 预置 4 条通用经验示例。更多经验由用户在日常使用中通过 `/mine` 沉淀。
@@ -112,12 +115,15 @@ cp agents/experience-miner.md ~/.config/opencode/agents/
 ## 5. 验证清单
 
 ```
-□ ~/.config/opencode/AGENTS.md 存在
+□ ~/.config/opencode/AGENTS.md 存在（v2 六类知识模型）
 □ ~/.config/opencode/skills/experience-index/SKILL.md 存在
 □ ~/.config/opencode/skills/tp/search-first/SKILL.md 存在
-□ ~/.config/opencode/skills/wf/bugfix-flow/SKILL.md 存在
+□ ~/.config/opencode/skills/method/bugfix-flow/SKILL.md 存在
+□ ~/.config/opencode/skills/dw/analysis-handoff-fallback/SKILL.md 存在
 □ ~/.config/opencode/skills/cs/ts-type-assertion-trap/SKILL.md 存在
+□ ~/.config/opencode/skills/pf/SKILL.md 存在
+□ ~/.config/opencode/skills/dk/SKILL.md 存在
 □ ~/.config/opencode/skills/ap/context-explosion/SKILL.md 存在
-□ ~/.config/opencode/agents/experience-miner.md 存在
+□ ~/.config/opencode/agents/experience-miner.md 存在（v2）
 □ opencode.json 包含 /mine 和 /exp 命令
 ```

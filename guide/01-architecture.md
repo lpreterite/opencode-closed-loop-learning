@@ -113,8 +113,11 @@
 | 类别 | 前缀 | 说明 | 目录 |
 |------|------|------|------|
 | 工具优先级 | tp/ | 工具使用的优先级和组合策略 | skills/tp/ |
-| 流程经验 | wf/ | 完成某类任务的标准化步骤 | skills/wf/ |
-| 案例经验 | cs/ | 解决具体问题的完整案例 | skills/cs/ |
+| 方法论 | method/ | 通用可迁移的做事方法 | skills/method/ |
+| 领域工作流 | dw/ | 绑定特定系统/业务的可执行步骤 | skills/dw/ |
+| 案例经验 | cs/ | 从经历中提炼的特定场景事件 | skills/cs/ |
+| 偏好 | pf/ | 个人倾向的稳定表达 | skills/pf/ |
+| 领域知识 | dk/ | 已确认的稳定约束 | skills/dk/ |
 | 反模式 | ap/ | 应该避免的做法和信号 | skills/ap/ |
 
 ---
@@ -130,21 +133,42 @@
 ├── agents/
 │   └── experience-miner.md                # Layer 3: 经验提取 Agent
 │
-└── skills/
-    ├── experience-index/                  # Layer 1: 经验路由索引
-    │   └── SKILL.md
-    │
-    ├── tp/                               # 工具优先级经验（示例）
-    │   └── search-first/
-    │
-    ├── wf/                               # 流程经验（示例）
-    │   └── bugfix-flow/
-    │
-    ├── cs/                               # 案例经验（示例）
-    │   └── ts-type-assertion-trap/
-    │
-    └── ap/                               # 反模式警告（示例）
-        └── context-explosion/
+    └── skills/
+        ├── experience-index/                  # Layer 1: 经验路由索引
+        │   └── SKILL.md
+        │
+        ├── tp/                               # 工具优先级经验
+        │   ├── search-first/
+        │   ├── edit-over-write/
+        │   └── ...
+        │
+        ├── method/                           # 方法论（通用可迁移）
+        │   ├── bugfix-flow/
+        │   ├── feature-dev/
+        │   ├── git-commit/
+        │   └── ...
+        │
+        ├── dw/                               # 领域工作流（绑定特定系统）
+        │   ├── analysis-handoff-fallback/
+        │   ├── design-product-acceptance/
+        │   └── ...
+        │
+        ├── cs/                               # 案例经验
+        │   ├── ts-type-assertion-trap/
+        │   ├── dep-version-conflict/
+        │   └── ...
+        │
+        ├── pf/                               # 偏好（个人倾向）
+        │   └── SKILL.md (模板)
+        │
+        ├── dk/                               # 领域知识（稳定约束）
+        │   └── SKILL.md (模板)
+        │
+        └── ap/                               # 反模式警告
+            ├── context-explosion/
+            ├── overedit/
+            ├── skip-verify/
+            └── ...
 ```
 
 > 预置 4 条通用经验示例，用户可通过 `/mine` 沉淀更多经验。
@@ -153,11 +177,14 @@
 
 ## 7. 加载时机详解
 
-| 场景 | 推荐加载 | 触发条件 |
+| 场景 | 三维定位 | 推荐加载 |
 |------|---------|---------|
-| 代码搜索/定位 | tp/search-first | 需要找文件或代码位置 |
-| Bug 修复 | wf/bugfix-flow | 用户报告错误/异常 |
-| TS 类型断言陷阱 | cs/ts-type-assertion-trap | 编译通过但运行报错 |
-| 上下文爆炸 | ap/context-explosion | 一次读取超过 10 个文件 |
+| 代码搜索/定位 | 具体+通用+中性 | tp/search-first |
+| Bug 修复 | 偏抽象+通用+偏现实 | method/bugfix-flow |
+| TS 类型断言陷阱 | 具体+中性+中间 | cs/ts-type-assertion-trap |
+| 上下文爆炸 | 最抽象+偏通用+偏主观 | ap/context-explosion |
+| 分析交接补位 | 偏抽象+专业+偏现实 | dw/analysis-handoff-fallback |
+| 用户表达偏好 | 偏具体+通用+最主观 | pf/ （新建偏好） |
+| 需要确认约束 | 中间+专业+偏现实 | dk/ （新建知识） |
 
-> 预置 4 条通用经验示例，用户可通过 `/mine` 沉淀更多经验。
+> 三维定位轴：A 抽象↔具体 / B 通用↔专业 / C 主观↔现实

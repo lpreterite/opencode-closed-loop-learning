@@ -1,59 +1,62 @@
 ---
 name: search-first
-description: 搜索优先原则 - 动手前先搜索了解现状
+description: 代码搜索类操作的优先级和最佳实践
 metadata:
   category: tool-priority
-  status: verified
-  created: "2026-04-07"
-  apply_count: 0
-  fail_count: 0
-  last_fail: null
-  corrections: []
+  status: core
+  verified_count: 3
 ---
 
-# 搜索优先原则
+# 搜索类工具优先级
 
 ## 优先级排序
-1. **grep/ripgrep** — 代码内容搜索，最快定位关键词
-2. **glob** — 按文件名模式搜索，适合找特定类型文件
-3. **read** — 确认文件内容，验证搜索结果
-4. **edit/write** — 修改文件，最后一步
 
-## 适用边界
+1. **Grep** — 内容搜索首选
+   - 支持正则表达式
+   - 可按文件类型过滤（include 参数）
+   - 返回文件路径和行号
 
-**适用场景：**
-- 需要找文件位置或代码位置时
-- 不确定某个功能在哪个文件时
-- 需要了解现有代码结构时
+2. **Glob** — 文件名模式匹配
+   - 适用于"找到所有 XX 类型的文件"
+   - 支持通配符（**/*.ts）
+   - 按修改时间排序
 
-**不适用场景：**
-- 已知具体文件路径，直接 read/edit
-- 明确知道要创建新文件
+3. **Read** — 读取特定已知文件
+   - 用于你已经知道文件路径的情况
+   - 支持 offset/limit 分段读取
+   - 支持并行读取多个文件
+
+4. **Task(explore)** — 复杂的开放式探索
+   - 用于不确定要找什么的场景
+   - 委托给 explore 子代理执行
+   - 适合大面积代码库的初步了解
 
 ## 典型场景
 
-### 场景：不确定某个函数在哪里
-
+### 场景 1：找到某个函数的定义
 ```
-1. grep 搜索函数名
-2. 找到后 read 确认上下文
-3. 如需修改，再用 edit
+Grep("function myFunc|const myFunc|def myFunc")
+→ 定位到文件和行号
+→ Read 该文件对应行
 ```
 
-### 场景：需要了解项目结构
-
+### 场景 2：理解某个模块的架构
 ```
-1. glob "**/*.ts" 列出所有 TypeScript 文件
-2. 根据文件名作判断
-3. 针对性地 read 需要了解的
+Glob("**/module-name/**/*.ts")
+→ 了解文件结构
+→ Read 入口文件（index.ts / main.ts）
+→ Grep("export.*from", include="*.ts")  → 了解对外接口
+```
+
+### 场景 3：查找某个错误的来源
+```
+Grep("错误信息关键词")
+→ 定位到出错文件
+→ Read 出错上下文
+→ 如需更深入，Grep 调用链
 ```
 
 ## 反模式
-
-- **上来就 read 整个目录** — 浪费上下文，应该用 glob 筛选
-- **用 Bash find 命令** — 应该用内置的 glob 工具
-- **不搜索直接问用户** — 用户不一定记得，应该先自己搜索
-
-## 失败案例
-
-AI 上来就读了 20 个文件来"了解项目"，导致上下文爆炸。正确做法是先 grep/glob 定位关键文件。
+- 不要用 Read 逐个翻文件来"搜索"（效率极低）
+- 不要在 Glob 能解决的问题上用 Task(explore)（杀鸡用牛刀）
+- 不要忽略 Grep 的 include 参数（全文件搜索浪费时间）
