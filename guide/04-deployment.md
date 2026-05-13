@@ -21,7 +21,7 @@
 ### 步骤 1：创建目录结构
 
 ```bash
-mkdir -p ~/.config/opencode/skills/{experience-index,tp, wf/{feature-dev,bugfix-flow,refactor-safe,git-commit},cs/{dep-version-conflict,ts-type-assertion-trap},ap/{context-explosion,overedit,skip-verify}}
+mkdir -p ~/.config/opencode/skills/{experience-index,cs,pf,dk,ap/{context-explosion,overedit,skip-verify}}
 mkdir -p ~/.config/opencode/agents
 ```
 
@@ -84,7 +84,7 @@ mkdir -p ~/.config/opencode/agents
 ```bash
 ls ~/.config/opencode/AGENTS.md
 ls ~/.config/opencode/skills/experience-index/SKILL.md
-ls ~/.config/opencode/skills/tp/search-first/SKILL.md
+ls ~/.config/opencode/skills/method/search-first/SKILL.md
 ls ~/.config/opencode/skills/method/bugfix-flow/SKILL.md
 ls ~/.config/opencode/skills/ap/context-explosion/SKILL.md
 ls ~/.config/opencode/agents/experience-miner.md
@@ -112,11 +112,7 @@ ls ~/.config/opencode/agents/experience-miner.md
     └── skills/
         ├── experience-index/
         │   └── SKILL.md                      # 经验路由索引
-        ├── tp/                               # 工具优先级
-        │   ├── search-first/SKILL.md
-        │   ├── edit-over-write/SKILL.md
-        │   └── parallel-strategy/SKILL.md
-        ├── method/                           # 方法论（通用可迁移）
+        ├── method/                           # 方法论（通用可迁移，含工具选择策略）
         │   ├── bugfix-flow/SKILL.md
         │   ├── feature-dev/SKILL.md
         │   ├── refactor-safe/SKILL.md

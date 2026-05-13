@@ -13,7 +13,7 @@
 在 OpenCode 中构建一套**按需加载经验的闭环学习系统**，使 AI 编程助手能够：
 
 1. **按需加载**：根据当前任务类型，自动匹配并加载相关经验
-2. **经验分类**：六类知识模型 + 工具优先级，共七类经验
+2. **经验分类**：六类知识模型（案例/偏好/反模式/方法论/领域工作流/领域知识）
 3. **闭环沉淀**：从对话中提取有价值经验，持续积累
 4. **质量验证**：新经验需经过验证后才标记为可靠
 
@@ -27,7 +27,7 @@
 ├─────────────────────────────────────────────────────┤
 │  Layer 1: 经验索引 (skill: experience-index)          │  ← 按需加载，路由决策
 ├─────────────────────────────────────────────────────┤
-│  Layer 2: 领域经验库 (skills: tp/ wf/ cs/ ap/)        │  ← 按需加载，具体经验
+│  Layer 2: 领域经验库 (skills: method/ dw/ cs/ pf/ dk/ ap/)  │  ← 按需加载，具体经验
 ├─────────────────────────────────────────────────────┤
 │  Layer 3: 经验提取 Agent (agent: experience-miner)    │  ← 对话后半自动触发
 └─────────────────────────────────────────────────────┘
@@ -39,7 +39,7 @@
 |------|---------|---------|-----------|
 | Layer 0 | `AGENTS.md` + `instructions` | 每次会话启动 | 固定，约 500 token |
 | Layer 1 | `skills/experience-index/` | Agent 判断需要时 | 约 300 token |
-| Layer 2 | `skills/tp/ method/ dw/ cs/ pf/ dk/ ap/` | 根据索引推荐 | 每条约 200-500 token |
+| Layer 2 | `skills/method/ dw/ cs/ pf/ dk/ ap/` | 根据索引推荐 | 每条约 200-500 token |
 | Layer 3 | `agents/experience-miner.md` | 半自动触发 | 仅提取时占用 |
 
 ### 2.2 渐进式披露协议
@@ -98,7 +98,7 @@ Layer 3 (experience-miner)            ← 仅提取时加载
                     └────────┬─────────┘
                              ▼
                     ┌──────────────────┐
-      Layer 2 ──→   │  按需加载领域经验  │  ← skill: tp/ method/ dw/ cs/ pf/ dk/ ap
+      Layer 2 ──→   │  按需加载领域经验  │  ← skill: method/ dw/ cs/ pf/ dk/ ap
                     │  指导任务执行     │
                     └────────┬─────────┘
                              ▼
@@ -149,8 +149,7 @@ Layer 3 (experience-miner)            ← 仅提取时加载
 
 | 类别 | 前缀 | 说明 | 目录 |
 |------|------|------|------|
-| 工具优先级 | tp/ | 工具使用的优先级和组合策略 | skills/tp/ |
-| 方法论 | method/ | 通用可迁移的做事方法 | skills/method/ |
+| 方法论 | method/ | 通用可迁移的做事方法（含工具选择策略） | skills/method/ |
 | 领域工作流 | dw/ | 绑定特定系统/业务的可执行步骤 | skills/dw/ |
 | 案例经验 | cs/ | 从经历中提炼的特定场景事件 | skills/cs/ |
 | 偏好 | pf/ | 个人倾向的稳定表达 | skills/pf/ |
@@ -173,11 +172,6 @@ Layer 3 (experience-miner)            ← 仅提取时加载
     └── skills/
         ├── experience-index/                  # Layer 1: 经验路由索引
         │   └── SKILL.md
-        │
-        ├── tp/                               # 工具优先级经验
-        │   ├── search-first/
-        │   ├── edit-over-write/
-        │   └── ...
         │
         ├── method/                           # 方法论（通用可迁移）
         │   ├── bugfix-flow/
@@ -214,7 +208,7 @@ Layer 3 (experience-miner)            ← 仅提取时加载
 
 | 场景 | 三维定位 | 推荐加载 |
 |------|---------|---------|
-| 代码搜索/定位 | 具体+通用+中性 | tp/search-first |
+| 代码搜索/定位 | 具体+通用+中性 | method/search-first |
 | Bug 修复 | 偏抽象+通用+偏现实 | method/bugfix-flow |
 | TS 类型断言陷阱 | 具体+中性+中间 | cs/ts-type-assertion-trap |
 | 上下文爆炸 | 最抽象+偏通用+偏主观 | ap/context-explosion |
