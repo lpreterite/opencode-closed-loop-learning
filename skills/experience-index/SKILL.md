@@ -35,6 +35,12 @@ metadata:
 | 文件写入验证 | method/write-verify | write 工具创建新文件后 | ⚡待验证 |
 | 架构不一致分析 | method/architecture-mismatch-analysis | 文档与代码不一致 | ⚡待验证 |
 | 多 Subagent 协作 | method/multi-subagent-collaboration | Tester 发现 Bug 转交 Developer | ⚡待验证 |
+| 代码搜索/定位 | method/search-first | 需要找文件或代码位置 | ✅核心 |
+| 多文件并行操作 | method/parallel-strategy | 需要同时处理多个文件 | ✅核心 |
+| 设计验证降级 | method/design-verification-fallback | 图像工具不可用 | ✅已验证 |
+| 文件编辑/修改 | method/edit-over-write | 需要修改现有代码 | ⚡待验证 |
+| GitHub SSH 切换 | method/https-to-ssh-fallback | git push 认证失败 | ⚡待验证 |
+| 项目重命名搜索 | method/search-after-rename | 项目重命名后全局搜索 | ⚡待验证 |
 
 ## 领域工作流 (dw/)
 
@@ -45,6 +51,9 @@ metadata:
 | 分析交接补位 | dw/analysis-handoff-fallback | 子智能体完成分析但未落档 | ⚡待验证 |
 | 设计稿产品验收 | dw/design-product-acceptance | 按 PRD/用户旅程验收设计稿 | ⚡待验证 |
 | 周任务验收同步 | dw/weekly-task-acceptance-sync | 周目录新增 review 后同步 | ⚡待验证 |
+| GitHub CI 调试 | dw/gh-ci-debug | 需要调试 GitHub Actions 失败 | ⚡待验证 |
+| opencode MCP 调试 | dw/opencode-mcp-debug | mcp list 失败 / MCP 连接问题 | ⚡待验证 |
+| Pencil MCP 工作流 | dw/pencil-mcp-workflow | 使用 Pencil VS Code 扩展 | ⚡待验证 |
 
 ## 案例经验 (cs/)
 
@@ -97,22 +106,6 @@ metadata:
 | 混合范围提交 | ap/mixed-scope-commit | 提交混入非指定目录改动 | ⚡待验证 |
 | 不存在的 API 参数 | ap/false-api-parameter | 使用文档不存在的参数 | ⚡待验证 |
 | 文档与实现不一致 | ap/doc-implementation-mismatch | 文档定义与代码不符 | ⚡待验证 |
-
-## 工具优先级 (tp/)
-
-> 工具使用的优先级和组合策略（方法论的子集，独立保留）
-
-| 场景 | 推荐加载 | 状态 |
-|------|---------|------|
-| 代码搜索/定位 | tp/search-first | ✅核心 |
-| 文件编辑/修改 | tp/edit-over-write | ⚡待验证 |
-| 多文件并行操作 | tp/parallel-strategy | ✅核心 |
-| Pencil MCP 工作流 | tp/pencil-mcp-workflow | 使用 Pencil VS Code 扩展 | ⚡待验证 |
-| 设计验证降级 | tp/design-verification-fallback | 图像工具不可用 / "Not connected" | ✅已验证 |
-| GitHub SSH 切换 | tp/https-to-ssh-fallback | git push 认证失败 | ⚡待验证 |
-| 项目重命名搜索 | tp/search-after-rename | 项目重命名后全局搜索 | ⚡待验证 |
-| GitHub CI 调试 | tp/gh-ci-debug | 需要调试 CI 失败 | ⚡待验证 |
-| opencode MCP 调试 | tp/opencode-mcp-debug | mcp list 失败 | ⚡待验证 |
 
 ## 知识蒸馏 DAG
 
