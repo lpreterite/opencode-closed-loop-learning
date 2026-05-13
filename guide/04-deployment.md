@@ -41,8 +41,8 @@ mkdir -p ~/.config/opencode/agents
 {
   "command": {
     "mine": {
-      "template": "请分析当前对话，提取其中有价值的经验（工具使用技巧、流程经验、案例教训、反模式），并将它们以独立 SKILL.md 文件的形式沉淀到 ~/.config/opencode/skills/ 对应分类目录中。使用 @经验矿工 智能体执行。完成后更新 experience-index。",
-      "description": "从当前对话中提取经验到经验库",
+      "template": "分析当前对话，按六类知识分类模型识别有价值经验，以独立 SKILL.md 文件沉淀到 ~/.config/opencode/skills/ 对应目录：方法(method/)、领域工作流(dw/)、案例(cs/)、偏好(pf/)、领域知识(dk/)、反模式(ap/)。蒸馏时机：案例直接记录，偏好第1次问用户，领域知识第2次问用户，方法论跨域同型问用户，领域工作流第3次同类问用户，反模式第2次不同场景问用户。使用 @经验矿工 执行，完成后更新 experience-index。",
+      "description": "按六类知识分类模型从当前对话提取经验",
       "agent": "build"
     },
     "exp": {

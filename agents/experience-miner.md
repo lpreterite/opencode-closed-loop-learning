@@ -309,41 +309,6 @@ metadata:
 <这个反模式曾经以其他形式失败过的场景>
 ```
 
-#### 工具优先级模板 (tp/)
-
-```markdown
----
-name: <名称>
-description: <一句话描述>
-metadata:
-  category: tool-priority
-  status: draft
-  created: "<日期>"
-  fail_count: 0
-  last_fail: null
-  corrections: []
----
-
-# <工具优先级标题>
-
-## 优先级排序
-1. **工具A** — 说明
-2. **工具B** — 说明
-
-## 适用边界
-<这条经验在什么情况下适用？什么情况下不适用？>
-
-## 典型场景
-### 场景 1：<描述>
-<具体步骤>
-
-## 反模式
-<不应该怎么做>
-
-## 失败案例
-<这条经验曾经失败过的场景，帮助理解边界>
-```
-
 ### 第五步：更新索引
 
 在 experience-index 的对应分类表中追加新条目。
