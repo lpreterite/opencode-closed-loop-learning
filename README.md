@@ -71,7 +71,7 @@
 
 ## 经验库
 
-经验按七类组织，沉淀在 `~/.config/opencode/skills/` 下。每条经验以独立的 `SKILL.md` 文件存在，通过 `experience-index` 路由索引加载。
+经验按六类组织，沉淀在 `~/.config/opencode/skills/` 下。每条经验以独立的 `SKILL.md` 文件存在，通过 `experience-index` 路由索引加载。
 
 开箱时预置了基础经验模板，日常使用中通过 `/mine` 持续积累。
 
@@ -81,10 +81,11 @@
 
 ```
 guide/           # 设计文档，看完就知道系统是怎么运作的
-├── 01-architecture.md   # 系统架构
+├── 01-architecture.md   # 系统架构（含渐进式披露协议）
 ├── 02-usage.md          # 日常使用指南
-├── 03-experience-management.md  # 经验管理与验证机制
-└── 04-deployment.md     # 部署指南
+├── 03-experience-management.md  # 经验管理与知识蒸馏
+├── 04-deployment.md     # 部署指南
+└── 05-revamp.md         # 六类知识模型改版方案
 
 skills/          # 经验库，沉淀在这里
 ├── experience-index/    # 经验路由索引（按需加载入口）
@@ -115,6 +116,7 @@ setup/           # 怎么部署到 OpenCode
 | 版本 | 日期 | 修订内容 |
 |------|------|----------|
 | v0.5 | 2026-05-13 | tp/ 归入 method/ + dw/，六类知识模型最终对齐 |
+| v0.4 | 2026-05-13 | 六类知识模型升级 — wf/ → method/ + dw/，新增 pf/ + dk/ |
 | v0.3 | 2026-04-07 | 删除成功计数验证，失败是唯一验证信号 |
 | v0.2 | 2026-04-07 | 清空预置经验内容，保留入口框架 |
 | v0.1 | 2026-04-07 | 初始版本 |
