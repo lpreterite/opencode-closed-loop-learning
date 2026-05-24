@@ -40,7 +40,7 @@
 | Layer 0 | `AGENTS.md` + `instructions` | 每次会话启动 | 固定，约 500 token |
 | Layer 1 | `skills/experience-index/` | Agent 判断需要时 | 约 300 token |
 | Layer 2 | `skills/method/ dw/ cs/ pf/ dk/ ap/` | 根据索引推荐 | 每条约 200-500 token |
-| Layer 3 | `agents/experience-miner.md` | 半自动触发 | 仅提取时占用 |
+| Layer 3 | `docs/agents/experience-miner.md` | 半自动触发 | 仅提取时占用 |
 
 ### 2.2 渐进式披露协议
 
@@ -138,9 +138,8 @@ Layer 3 (experience-miner)            ← 仅提取时加载
 | **instructions** | 全局中文指令，会话启动时加载 | `opencode.json → instructions` |
 | **AGENTS.md (Rules)** | 全局基座规则，经验加载协议 | `~/.config/opencode/AGENTS.md` |
 | **Skills (SKILL.md)** | 经验的主要载体，按需加载 | `~/.config/opencode/skills/*/SKILL.md` |
-| **Agents (Markdown)** | 经验提取专用 Agent | `~/.config/opencode/agents/experience-miner.md` |
+| **Agents (Markdown)** | 经验提取专用 Agent | `docs/agents/experience-miner.md` |
 | **Commands** | `/mine` 和 `/exp` 快捷命令 | `opencode.json → command` |
-| **Compaction** | 自动清理已加载经验，节省上下文 | 自动工作，无需配置 |
 | **Permissions** | 控制哪些 Agent 可以修改经验库 | `opencode.json → permission` |
 
 ---

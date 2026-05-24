@@ -80,14 +80,10 @@
 ## 文件结构
 
 ```
-guide/           # 设计文档，看完就知道系统是怎么运作的
-├── 01-architecture.md   # 系统架构（含渐进式披露协议）
-├── 02-usage.md          # 日常使用指南
-├── 03-experience-management.md  # 经验管理与知识蒸馏
-├── 04-deployment.md     # 部署指南
-└── 05-revamp.md         # 六类知识模型改版方案
-
+setup.md         # ★ Agent 执行入口（按 ai-engineering 规范）
+README.md        # 项目概述
 skills/          # 经验库，沉淀在这里
+│
 ├── experience-index/    # 经验路由索引（按需加载入口）
 ├── method/               # 方法论（通用可迁移，含工具选择策略）
 ├── dw/                   # 领域工作流（绑定特定系统）
@@ -95,9 +91,22 @@ skills/          # 经验库，沉淀在这里
 ├── pf/                   # 偏好（个人倾向）
 ├── dk/                   # 领域知识（稳定约束）
 └── ap/                   # 反模式
-
-agents/          # 经验矿工，负责提取和修正
-setup/           # 怎么部署到 OpenCode
+│
+docs/            # 文档根目录
+├── STATUS.md            # 项目状态卡
+├── README.md            # 文档索引
+├── guide/               # 设计文档
+│   ├── 01-architecture.md        # 系统架构
+│   ├── 02-usage.md               # 日常使用指南
+│   ├── 03-experience-management.md  # 经验管理
+│   ├── 04-deployment.md          # 部署指南
+│   └── 05-revamp.md              # 六类知识模型改版方案
+├── agents/              # Agent 角色定义
+│   └── experience-miner.md       # 经验矿工
+├── setup/               # 工具安装指南
+│   └── opencode.md               # OpenCode 部署
+└── reference/           # 参考资料
+    └── directory.md              # 目录结构规范
 ```
 
 ---

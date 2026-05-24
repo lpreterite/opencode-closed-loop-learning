@@ -20,12 +20,12 @@ color: "#FFD700"
 
 | 类别 | 前缀 | 说明 | 目录 |
 |------|------|------|------|
-| 方法论 | method/ | 通用可迁移的做事方法（含工具选择策略） | skills/method/ |
-| 领域工作流 | dw/ | 绑定特定系统/业务的可执行步骤 | skills/dw/ |
-| 案例 | cs/ | 从经历中提炼的特定场景事件 | skills/cs/ |
-| 偏好 | pf/ | 个人倾向的稳定表达 | skills/pf/ |
-| 领域知识 | dk/ | 已确认的稳定约束 | skills/dk/ |
-| 反模式 | ap/ | 多次失败的蒸馏红线 | skills/ap/ |
+| 方法论 | method/ | 通用可迁移的做事方法（含工具选择策略） | `~/.config/opencode/skills/method/` |
+| 领域工作流 | dw/ | 绑定特定系统/业务的可执行步骤 | `~/.config/opencode/skills/dw/` |
+| 案例 | cs/ | 从经历中提炼的特定场景事件 | `~/.config/opencode/skills/cs/` |
+| 偏好 | pf/ | 个人倾向的稳定表达 | `~/.config/opencode/skills/pf/` |
+| 领域知识 | dk/ | 已确认的稳定约束 | `~/.config/opencode/skills/dk/` |
+| 反模式 | ap/ | 多次失败的蒸馏红线 | `~/.config/opencode/skills/ap/` |
 
 ### 三维定位（分类判断）
 

@@ -176,7 +176,7 @@ OpenCode 闭环学习系统当前采用 **4 类经验**（tp/wf/cs/ap），而�
 |------|---------|--------|
 | `skills/experience-index/SKILL.md` | 6+1 类分类表，三维加载协议，DAG 蒸馏规则 | P0 |
 | `AGENTS.md` | 加载协议升级为三维定位，新增蒸馏时机判断 | P0 |
-| `agents/experience-miner.md` | 新增 pf/dk/method/dw 提取流程，加入 DAG 蒸馏逻辑和时机判断 | P0 |
+| `docs/agents/experience-miner.md` | 新增 pf/dk/method/dw 提取流程，加入 DAG 蒸馏逻辑和时机判断 | P0 |
 
 ### 5.3 删除/迁移
 

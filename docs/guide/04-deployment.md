@@ -31,7 +31,7 @@ mkdir -p ~/.config/opencode/agents
 |--------|---------|------|
 | `AGENTS.md` | `~/.config/opencode/AGENTS.md` | 全局基座规则 |
 | `skills/*/SKILL.md` | `~/.config/opencode/skills/*/` | 经验库 |
-| `agents/experience-miner.md` | `~/.config/opencode/agents/` | 经验矿工 Agent |
+| `docs/agents/experience-miner.md` | `~/.config/opencode/agents/` | 经验矿工 Agent |
 
 ### 步骤 3：配置命令
 
@@ -88,6 +88,13 @@ ls ~/.config/opencode/skills/method/search-first/SKILL.md
 ls ~/.config/opencode/skills/method/bugfix-flow/SKILL.md
 ls ~/.config/opencode/skills/ap/context-explosion/SKILL.md
 ls ~/.config/opencode/agents/experience-miner.md
+
+# Verify docs structure
+ls docs/STATUS.md
+ls docs/guide/01-architecture.md
+ls docs/agents/experience-miner.md
+ls docs/setup/opencode.md
+ls docs/reference/directory.md
 ```
 
 验证命令是否可用：
@@ -109,32 +116,32 @@ ls ~/.config/opencode/agents/experience-miner.md
 ├── agents/
 │   └── experience-miner.md                # 经验矿工 Agent
 │
-    └── skills/
-        ├── experience-index/
-        │   └── SKILL.md                      # 经验路由索引
-        ├── method/                           # 方法论（通用可迁移，含工具选择策略）
-        │   ├── bugfix-flow/SKILL.md
-        │   ├── feature-dev/SKILL.md
-        │   ├── refactor-safe/SKILL.md
-        │   ├── git-commit/SKILL.md
-        │   ├── write-verify/SKILL.md
-        │   └── architecture-mismatch-analysis/SKILL.md
-        ├── dw/                               # 领域工作流（绑定特定系统）
-        │   ├── analysis-handoff-fallback/SKILL.md
-        │   ├── design-product-acceptance/SKILL.md
-        │   └── weekly-task-acceptance-sync/SKILL.md
-        ├── cs/                               # 案例经验
-        │   ├── dep-version-conflict/SKILL.md
-        │   ├── ts-type-assertion-trap/SKILL.md
-        │   └── ...
-        ├── pf/                               # 偏好（新建）
-        │   └── SKILL.md (模板)
-        ├── dk/                               # 领域知识（新建）
-        │   └── SKILL.md (模板)
-        └── ap/                               # 反模式
-            ├── context-explosion/SKILL.md
-            ├── overedit/SKILL.md
-            └── skip-verify/SKILL.md
+└── skills/
+    ├── experience-index/
+    │   └── SKILL.md                      # 经验路由索引
+    ├── method/                           # 方法论（通用可迁移，含工具选择策略）
+    │   ├── bugfix-flow/SKILL.md
+    │   ├── feature-dev/SKILL.md
+    │   ├── refactor-safe/SKILL.md
+    │   ├── git-commit/SKILL.md
+    │   ├── write-verify/SKILL.md
+    │   └── architecture-mismatch-analysis/SKILL.md
+    ├── dw/                               # 领域工作流（绑定特定系统）
+    │   ├── analysis-handoff-fallback/SKILL.md
+    │   ├── design-product-acceptance/SKILL.md
+    │   └── weekly-task-acceptance-sync/SKILL.md
+    ├── cs/                               # 案例经验
+    │   ├── dep-version-conflict/SKILL.md
+    │   ├── ts-type-assertion-trap/SKILL.md
+    │   └── ...
+    ├── pf/                               # 偏好（新建）
+    │   └── SKILL.md (模板)
+    ├── dk/                               # 领域知识（新建）
+    │   └── SKILL.md (模板)
+    └── ap/                               # 反模式
+        ├── context-explosion/SKILL.md
+        ├── overedit/SKILL.md
+        └── skip-verify/SKILL.md
 ```
 
 ---

@@ -4,8 +4,8 @@
 
 **所属目录**：`opencode-closed-loop-learning/setup/`
 **文档状态**：已发布
-**当前版本**：v0.1
-**发布日期**：2026-04-07
+**当前版本**：v0.2
+**发布日期**：2026-05-24
 
 ---
 
@@ -49,7 +49,7 @@ cp -r skills/* ~/.config/opencode/skills/
 ### 步骤 3：部署 Agent
 
 ```bash
-cp agents/experience-miner.md ~/.config/opencode/agents/
+cp docs/agents/experience-miner.md ~/.config/opencode/agents/
 ```
 
 ### 步骤 4：配置命令
@@ -97,18 +97,37 @@ cp agents/experience-miner.md ~/.config/opencode/agents/
 ├── agents/
 │   └── experience-miner.md                # 经验矿工 Agent
 │
-    └── skills/
-        ├── experience-index/SKILL.md
-        ├── method/search-first/SKILL.md
-        ├── method/bugfix-flow/SKILL.md (原 wf/)
-        ├── dw/analysis-handoff-fallback/SKILL.md (原 wf/)
-        ├── cs/ts-type-assertion-trap/SKILL.md
-        ├── pf/SKILL.md (模板)
-        ├── dk/SKILL.md (模板)
-        └── ap/context-explosion/SKILL.md
+└── skills/
+    ├── experience-index/SKILL.md
+    ├── method/search-first/SKILL.md
+    ├── method/bugfix-flow/SKILL.md (原 wf/)
+    ├── dw/analysis-handoff-fallback/SKILL.md (原 wf/)
+    ├── cs/ts-type-assertion-trap/SKILL.md
+    ├── pf/SKILL.md (模板)
+    ├── dk/SKILL.md (模板)
+    └── ap/context-explosion/SKILL.md
 ```
 
 > 预置 4 条通用经验示例。更多经验由用户在日常使用中通过 `/mine` 沉淀。
+
+### 4.1 项目仓库结构
+
+本仓库按 [ai-engineering 研发工程体系](https://github.com/lpreterite/ai-engineering) 组织文档：
+
+```
+opencode-closed-loop-learning/
+├── setup.md              # ★ Agent 执行入口
+├── README.md             # 项目概述
+├── skills/               # 经验库（OpenCode 实际加载）
+│
+└── docs/                 # 文档根目录
+    ├── STATUS.md         # 项目状态卡
+    ├── README.md         # 文档索引
+    ├── guide/            # 设计文档
+    ├── agents/           # Agent 角色定义
+    ├── setup/            # 工具安装指南
+    └── reference/        # 参考资料
+```
 
 ---
 
